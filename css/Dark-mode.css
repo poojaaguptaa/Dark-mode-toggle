@@ -1,0 +1,35 @@
+
+/*body css*/
+body{margin: 0; display: flex; justify-content: center; height: 100vh; align-items: center; transition: .4s;}
+
+/*input field checkbox css*/
+.input {float: left; visibility: hidden;}
+
+/*label css*/
+.label{ float: left; width: 80px; height: 40px; background-color: lightgrey; cursor: pointer; position: absolute; border-radius: 20px;}
+
+/*circle inside a label*/
+.circle{ width: 34px; animation: toggleOff .4s linear forwards; background-color: white; height: 34px; border-radius: 50%; top: 3px; left: 3px; position: absolute; }
+
+/*input checked */
+.input:checked + .label{background-color: salmon;}
+
+.input:checked + .label .circle{ animation: toggleOn .4s linear forwards;}
+
+@keyframes toggleOn{
+	0%{
+		transform: translateX(0px);
+	}
+	100%{
+		transform: translateX(40px);
+	}
+}
+
+@keyframes toggleOff{
+	0%{
+		transform: translateX(40px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
